@@ -1,0 +1,31 @@
+.v-dialog.fill-height {
+  height: 90%;
+}
+
+/* Not sure why this is needed currently */
+.v-dialog__container {
+  display: inline !important;
+}
+
+.v-app-bar.v-app-bar--fixed {
+  z-index: 4;
+}
+
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  &.table-striped {
+    tr {
+      border-bottom: 1px #ccc solid;
+    }
+    tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color:white;
+    }
+  }
+  td {
+    padding: 1em;
+  }
+}

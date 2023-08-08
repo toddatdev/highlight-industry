@@ -1,0 +1,692 @@
+$primary-color:#02A576;
+$dark-color:#242424;
+
+@font-face {
+  font-family: ubuntu;
+  src: url('/fonts/Ubuntu-Regular.ttf');
+}
+body{
+  font-family: ubuntu;
+}
+.navbar{
+  box-shadow: 0px 5px 10px #d5d2d2;
+}
+
+.btn:focus{
+  box-shadow: none !important;
+}
+.green-text{
+  color: $primary-color;
+}
+.nav-icons{
+  img{
+    border-left: 1px solid #C2C2C2;
+    height: 23px;
+  }
+}
+.font-ubuntu{
+  font-family: ubuntu;
+}
+.border-silver{
+  border: 1px solid #D9D9D9;
+}
+i:hover{
+  color: $primary-color;
+}
+.btn-green{
+  background-color: $primary-color;
+  color: #fff;
+  border: 1px solid $primary-color;
+}
+.btn-green:hover{
+  background-color: #fff;
+  color: $primary-color;
+}
+.eliminator-cards{
+  .card{
+    img{
+      &:first-child{
+        max-width: 200px;
+        margin: 0 auto;
+        padding: 14px;
+        min-height: 250px;
+      }
+
+    }
+    i{
+      border: 1px solid $primary-color;
+      padding:7px 14px;
+      border-radius: 5px;
+      color: #373737;
+      &:hover{
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+    p{
+      margin-bottom: 0px;
+      font-size: 19px;
+      font-weight: 700;
+    }
+  }
+}
+header{
+
+  .topnav{
+    background-color: $dark-color;
+    color: #fff;
+    i{
+      opacity: 0.7;
+    }
+    .nav-right-text{
+      p{
+        margin-bottom: 0px;
+        margin: 0 10px;
+        font-size: 15px;
+        opacity: 0.7;
+        font-family: ubuntu;
+      }
+
+      .border-x{
+        border-left: 1px solid #737373;
+        border-right: 1px solid #737373;
+        padding: 0px 15px;
+      }
+
+    }
+  }
+  .navbar-nav{
+    .nav-item{
+      .nav-link{
+        font-size: 16px;
+        padding: 0px 15px;
+      }
+    }
+  }
+  .nav-icons{
+    i{
+      font-size: 20px;
+    }
+  }
+  .navbar-nav .nav-item .nav-link.active{
+    background-image: url('../../assets/images/small-border.svg') !important;
+    background-repeat: no-repeat;
+    background-position:center bottom;
+  }
+  .lh-13{
+    line-height: 13px;
+  }
+}
+
+
+
+.highlight-page{
+  // doesnt work funnly on firefox or edge, need to fix
+
+  .range-slider {
+    width: 300px;
+    text-align: center;
+    position: relative;
+    .rangeValues {
+      display: block;
+    }
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    width: 300px;
+    position: absolute;
+    left: 0;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $primary-color;
+    margin-top: -4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $primary-color;
+
+  }
+
+
+  /*hide the outline behind the border*/
+
+  input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
+  }
+
+  input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+    /*remove default tick marks*/
+    color: transparent;
+    z-index: -4;
+
+  }
+
+  input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+  }
+
+  input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+  }
+
+  input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $primary-color;
+  }
+
+  input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+  }
+
+  input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+  }
+  //   dropdown button
+  .crypto-icon {
+    height: 1em;
+    vertical-align: baseline;
+    margin-bottom: -0.1em;
+  }
+  .sik-dropdown > button.dropdown-toggle {
+    position: relative;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 2ch;
+    text-align: left;
+  }
+  .sik-dropdown > button.dropdown-toggle::after {
+    position: absolute;
+    right: 1ch;
+    top: calc(50% - 0.2ch);
+  }
+  .sik-dropdown .dropdown-item {
+    cursor: pointer;
+  }
+
+  .form-check-input:checked{
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+  .categories-card{
+    .card-body{
+      max-height: 450px !important;
+      overflow: auto !important;
+    }
+  }
+  .dropdown-item:hover{
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+footer{
+  margin-top: 160px;
+  .footer-top{
+    background-color: $primary-color;
+    color: #fff;
+    .footer-input{
+      input{
+        background-color: #008A62 !important;
+        border: 0px !important;
+
+        &::placeholder{
+          color: #ffffffbd !important;
+        }
+      }
+      button{
+        color: $primary-color;
+      }
+    }
+
+    img{
+      margin-top: -140px;
+    }
+  }
+  .footer-bottom{
+    background-color: $dark-color;
+  }
+}
+
+//
+
+@media only screen and (min-width:1400px){
+  .xzoom-thumbs{
+    display: block !important;
+    margin-top: 0px;
+
+    a{
+      img{
+        width: 167px !important;
+        margin-bottom: 10px;
+
+      }
+    }
+  }
+  .xzoom{
+    margin-left: 10px !important;
+    width: 70% !important;
+  }
+}
+
+@media only screen and (max-width:1399px){
+  .xzoom-thumbs{
+    display: block !important;
+    margin-top: 0px;
+
+    a{
+      img{
+        width: 143px !important;
+        margin-bottom: 10px;
+
+      }
+    }
+  }
+  .xzoom{
+    margin-left: 10px !important;
+    width: 70% !important;
+  }
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px){
+  header{
+    .navbar-nav{
+      .nav-item{
+        .nav-link{
+          font-size: 14px;
+          padding: 0px 9px;
+
+        }
+      }
+    }
+    .nav-icons{
+      img{
+        border-left: 0px !important;
+      }
+    }
+  }
+  .highlight-page{
+    input[type=range]{
+      width: 200px !important;
+      margin: 0 auto !important;
+    }
+    .range-slider{
+      width: 200px !important;
+    }
+  }
+  .xzoom-thumbs{
+    display: block !important;
+    margin-top: 0px !important;
+
+    a{
+      img{
+        width: 117px !important;
+        margin-bottom: 10px;
+
+      }
+    }
+  }
+  .xzoom{
+    margin-left: 13px !important;
+    width: 70% !important;
+  }
+  footer{
+    .footer-top{
+      padding: 17px 0px !important;
+    }
+    .footer-input{
+      input{
+        font-size: 12px !important;
+      }
+      button{
+        font-size: 12px !important;
+      }
+    }
+  }
+}
+@media only screen and (min-width:768px) and (max-width:991px){
+  header{
+    .navbar{
+      .nav-item{
+        .nav-link{
+          padding: 12px 0px;
+        }
+      }
+    }
+    .navbar-nav .nav-item .nav-link.active{
+      background-position: left bottom !important;
+    }
+    .nav-icons{
+      img{
+        border-left: 0px !important;
+      }
+    }
+  }
+  .highlight-page{
+    .row-max-width{
+      max-width: 750px;
+      margin: 0 auto;
+    }
+  }
+  .footer-top{
+    h1{
+      font-size: 21px !important;
+    }
+    img {
+      margin-top: -86px !important;
+    }
+  }
+  .eliminator-cards{
+    .card{
+      h5{
+        font-size: 16px  !important;
+      }
+    }
+    .col-md-4{
+      padding: 4px !important;
+    }
+    .col-md-3{
+      padding: 4px !important;
+    }
+  }
+  .xzoom{
+    width: 95%  !important;
+    margin-left: 0px !important;
+
+  }
+  .xzoom-thumbs{
+    display: flex !important;
+    margin-top: 20px;
+
+    a{
+      img{
+        width: 120px !important;
+        margin: 0 auto;
+
+      }
+    }
+  }
+  .eliminator-buttons{
+    button{
+      font-size: 13px !important;
+    }
+  }
+}
+@media only screen and (max-width:767px){
+  header{
+    .navbar{
+      .nav-item{
+        .nav-link{
+          padding: 12px 0px;
+        }
+      }
+    }
+    .nav-icons{
+      img{
+        border-left: 0px !important;
+      }
+    }
+    .navbar-nav .nav-item .nav-link.active{
+      background-position: left bottom !important;
+    }
+  }
+  .eliminator-cards{
+    .card{
+      margin-bottom: 20px;
+    }
+  }
+  .xzoom{
+    margin-left: 0 !important;
+    width: 95% !important;
+  }
+  .xzoom-thumbs{
+    display: flex !important;
+    margin-top: 20px;
+
+    a{
+      img{
+        width: 150px !important;
+        margin: 0 auto auto 4px;
+
+      }
+    }
+  }
+  .max-width {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer-input{
+    button{
+      width: 100%;
+      margin-left: 0px !important;
+      margin-top: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width:576px){
+  header{
+    .navbar{
+      .nav-item{
+        .nav-link{
+          padding: 8px 0px;
+        }
+      }
+    }
+  }
+  .eliminator-buttons{
+    button{
+      font-size: 14px !important;
+    }
+  }
+  .xzoom{
+    margin-left: 0 !important;
+    width: 95% !important;
+  }
+  .xzoom-thumbs{
+    display: flex !important;
+    margin-top: 20px;
+
+    a{
+      img{
+        width: 125px !important;
+        margin: 0 auto auto 4px;
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:430px){
+  .eliminator-buttons{
+    button{
+      font-size: 14px !important;
+    }
+  }
+  .xzoom{
+    margin-left: 0 !important;
+    width: 95% !important;
+  }
+  .xzoom-thumbs{
+    display: flex !important;
+    margin-top: 20px;
+
+    a{
+      img{
+        width: 105px !important;
+        margin: 0 auto auto 2px;
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:375px){
+  header{
+    .navbar{
+      .logo{
+        max-width: 150px !important;
+      }
+    }
+  }
+  .eliminator-buttons{
+    button{
+      font-size: 13px !important;
+    }
+  }
+  .xzoom{
+    margin-left: 0 !important;
+    width: 95% !important;
+  }
+  .xzoom-thumbs{
+    display: flex !important;
+    margin-top: 20px;
+
+    a{
+      img{
+        width: 90px !important;
+        margin: 0 auto auto 2px;
+
+      }
+    }
+  }
+
+}
+
+// product details css
+.product-details{
+  .xzoom-thumbs{
+    a{
+      img{
+        display: flex !important;
+
+      }
+    }
+  }
+  .xzoom{
+    margin-left: 30px;
+    width: 472px;
+    box-shadow:0px 0px 5px 0px #dbd9d9 !important;
+  }
+  //    counter
+  /* ------------------------------ COUNTER BEGIN ------------------------------ */
+  .counter__increment, .counter__decrement {
+    transition: all 0.4s ease-in-out;
+  }
+
+  .counter {
+    position: relative;
+    width: 100%;
+    height: 2.875rem;
+    border: 1px solid #373737;
+    border-radius: 3px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .counter__input {
+    border: none;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 17px !important;
+    text-align: center;
+    color: #2f3640;
+    font-size: 0.875rem;
+    background-color: transparent;
+  }
+  .counter__increment, .counter__decrement {
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    line-height: 1.5625rem;
+    height: 2.875rem;
+    width: 2.1875rem;
+    font-weight: normal;
+    color: #2f3640;
+    text-decoration: none;
+  }
+  .counter__increment:hover, .counter__increment:active, .counter__increment:focus, .counter__decrement:hover, .counter__decrement:active, .counter__decrement:focus {
+    color: #2f3640;
+    text-decoration: none;
+    background-color: #edeff0;
+  }
+  .counter__increment {
+    right: 0;
+    background-color: #E6E6E6;
+    line-height: 2.6875rem;
+    font-size: 25px !important;
+  }
+  .counter__decrement {
+    left: 0;
+    top: 0;
+    background-color: #E6E6E6;
+    line-height: 2.6875rem;
+    font-size: 25px !important;
+  }
+  .max-width{
+    max-width: 340px;
+  }
+  .eliminator-buttons{
+    button{
+      font-size: 16px;
+      margin-left: 8px;
+      line-height:35px;
+      &:first-child:hover{
+        background-color: $primary-color !important;
+        color: #fff;
+      }
+    }
+  }
+}
